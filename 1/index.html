@@ -2,21 +2,119 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Enjoy HTML5</title>
+  <title> Venta de Motos</title>
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link href="js/calendar.min.css" rel="stylesheet">
+	  <link rel="stylesheet" type="text/css" href="css/tuktuk.css">
+	  <link rel="stylesheet" type="text/css" href="css/tuktuk.icons.css">
+	  <link rel="stylesheet" type="text/css" href="css/tuktuk.theme.css">
+	  <link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	
+ <style> 
+body
+{
+background-size:100% 100%;
+background-repeat:no-repeat;
+} 
+</style>
+  <nav>
+
+<li> <a href=fotos.html> Más Fotos de la moto </a>  </li>
+
+<li><a href="DireccionPagina"> Item de Navegación 2 </li>
+
+<li><a href="DireccionPagina"> Item de Navegación Etc </li>
+
+</nav>
 </head>
 <body>
 	<header>
+	<a href="/html"><h1>Hermosa Moto en Venta</h1> </a> 
+	<div class="row margin-bottom">  
+		<div class="column_6 radius bck light padding-top padding-bottom"><span class="icon twitter"> Ir a Twitter</span>  </div>
+	    <div class="column_6 radius bck light padding-top padding-bottom"><span class="icon user"> Ver Correo </span>  </div>
+	</div>
 	<nav>
-	<a href="/html">HTML</a> |
 	<a href="/css">CSS</a> |
 	<a href="/js">JavaScript</a> |
 	<a href="/jquery">jQuery</a>
 	</nav>
-	</header>
- <article>
 
+	</header>
+	<section class="padding bck theme features" align="center">
+	
+ <article>
+ 	<img src="http://revistas.elheraldo.co/sites/default/files/2014/05/06/galeria/afiche_-_dsc_5203_0.jpg" >
+<p> La figura de Karla Jiménez pone a rugir cualquier motor. O para ser más exacto, hace que cualquier piloto se emplee al máximo en el caso de que esta barranquillera de 21 años de la salida en una carrera de harlistas.
+Imagínensela, con poca ropa, tal como la mostramos en estas páginas, sosteniendo la bandera a cuadros y dando la partida.  O los corredores se desconcentran y se estrellan, o intentan ganar a toda costa, solo para demostrarle a ella quién es el mejor.
+Karla lleva menos de un año trabajando como modelo. Antes que nada es publicista y no oculta que hace poco se hizo “un retoquito” estético para mejorar sus curvas.</p>
  </article>
+ </section>
+<div class="calendar" data-color="normal"><div data-role="day" data-day="2014514"><div data-role="event" data-name="Soy un evento que siempre saldr&eacute; ma&ntilde;ana" data-start="9.00" data-end="9.30" data-location="martiniglesias.eu"></div></div></div>
+ <!- Aqui va lo del login -->
+ <div id="container_demo" >
+    <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+    <a class="hiddenanchor" id="toregister"></a>
+    <a class="hiddenanchor" id="tologin"></a>
+    <div id="wrapper">
+        <div id="login" class="animate form">
+            <form  action="mysuperscript.php" autocomplete="on"> 
+                <h1>Ingresar</h1> 
+                <p> 
+                    <label for="username" class="uname" data-icon="u" > Tu Email o Usuario </label>
+                    <input id="username" name="username" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
+                </p>
+                <p> 
+                    <label for="password" class="youpasswd" data-icon="p"> Tu Contraseña </label>
+                    <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" /> 
+                </p>
+                <p class="keeplogin"> 
+                    <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
+                    <label for="loginkeeping">Permanecer Conectado</label>
+                </p>
+                <p class="login button"> 
+                    <input type="submit" value="Login" /> 
+                </p>
+                <p class="change_link">
+                    No Registrado ?
+                    <a href="#toregister" class="to_register">Registrese</a>
+                </p>
+            </form>
+        </div>
+ 
+        <div id="register" class="animate form">
+            <form  action="mysuperscript.php" autocomplete="on"> 
+                <h1> Registrar </h1> 
+                <p> 
+                    <label for="usernamesignup" class="uname" data-icon="u">Crear Usuario</label>
+                    <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
+                </p>
+                <p> 
+                    <label for="emailsignup" class="youmail" data-icon="e" > Tu Email</label>
+                    <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="mysupermail@mail.com"/> 
+                </p>
+                <p> 
+                    <label for="passwordsignup" class="youpasswd" data-icon="p">Crear Contraseña </label>
+                    <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                </p>
+                <p> 
+                    <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Por favor confirma tu Contraseña </label>
+                    <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                </p>
+                <p class="signin button"> 
+                    <input type="submit" value="Sign up"/> 
+                </p>
+                <p class="change_link">  
+                    Ya Registrado ?
+                    <a href="#tologin" class="to_register"> Ingresar </a>
+                </p>
+            </form>
+        </div>
+         
+    </div>
+</div>  
+ <!--Aqui termina lo del Login-->
  	<footer>
  			<nav>
 	<a href="/html">HTML</a> |
@@ -26,7 +124,37 @@
 	</nav>
 	</footer>
  <!-- Aca coloco todo mi js -->
-   <script src="js/modernizr-latest.js"></script>
+ <script src="js/modernizr-latest.js"></script>
   <script src="js/prefixfree-min.js"></script>
+  <script src="js/tuktuk.js"></script>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+ <script src="js/calendar.min.js"></script>
+	<script>
+	var yy;
+	var calendarArray =[];
+	var monthOffset = [6,7,8,9,10,11,0,1,2,3,4,5];
+	var monthArray = [["ENE","Enero"],["FEB","Febrero"],["MAR","Marzo"],["ABR","Abril"],["MAY","Mayo"],["JUN","Junio"],["JUL","Julio"],["AGO","Agosto"],["SEP","Septiembre"],["OCT","Octubre"],["NOV","Noviembre"],["DIC","Diciembre"]];
+	var letrasArray = ["L","M","X","J","V","S","D"];
+	var dayArray = ["7","1","2","3","4","5","6"];
+	$(document).ready(function() {
+		$(document).on('click','.calendar-day.have-events',activateDay);
+		$(document).on('click','.specific-day',activatecalendar);
+		$(document).on('click','.calendar-month-view-arrow',offsetcalendar);
+		$(window).resize(calendarScale);
+		$(".calendar").calendar({
+			"2013910": {
+				"Mulberry Festival": {
+					start: "9.00",
+					end: "9.30",
+					location: "London"
+				}
+			}
+		});
+		calendarSet();
+		calendarScale();
+		});
+	</script>
+
+   
 </body>
 </html>
