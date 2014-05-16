@@ -51,7 +51,14 @@
 <div id="contact" class="jumbotron">
 	<div class="container">
     <h1>Contacto</h1>
-    </div>
+    <form class="form-signin" id="formulario">
+        <h2 class="form-signin-heading">Enviame tu Feedback!!!</h2>
+         <input id="firstname" type="firstname" class="form-control" placeholder="Tu nombre" required>
+         <input id="lastname" type="lastname" class="form-control" placeholder="Tu apellido" required>
+        <input id="correo" type="email" class="form-control" placeholder="Ingresa tu correo. Prometo no enviarte spam ;)" required>
+        <input id="guardar" name="guardar" type="submit" value="Guardar" class="btn btn-lg btn-primary btn-block">
+        <input id="mostrar" name="mostrar" type="submit" value="Mostrar" class="btn btn-lg btn-primary btn-block">
+      </form>
 </div>
 <div class="container">
 <hr>
@@ -64,7 +71,33 @@
          <!-- Aca coloco todo mi js -->
 <script src="js/bootstrap.min.js"></script>
 <script type="text/javascript">
+		$('#formulario').submit(function()
+				{
+				//showMensaje();
+				// Check browser support
+				if (typeof(Storage) != "undefined")
+				  {
+				  var objetoJSON = '{nombre:"' + $('#firstname').val() + '",apellido:"' + $('#lastname').val() + '",correo:"' + $('#correo').val() + '"}';
+				  localStorage.setItem("usuario",JSON.stringify(objetoJSON));
+				  showMensaje();
+				  }
+				else
+				  {
+				  alert("No soportas el almacenamiento.");
+				  }
+				});	
+		$('#mostrar').click(function()
+				{
+					var user = JSON.parse(localStorage.getItem('usuario'));
+					alert(user.nombre);
+					});
+					
         $("[id*='Btn']").stop(true).on('click',function(e){e.preventDefault();$(this).scrolld();});
+		
+		function showMensaje(){
+			alert("Su informacion fue guardada.\nNombre: " + $('#firstname').val() + "\nApellido: " + $('#lastname').val() + "\nCorreo: " + $('#correo').val());
+			}
+			
         </script>
 </body>
 </html>
