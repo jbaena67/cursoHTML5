@@ -96,7 +96,8 @@
 		$('#mostrar').click(function()
 				{
 					var user = JSON.parse(localStorage.getItem('usuario'));
-					$('#mensaje').html(user.nombre);
+					var htmlmsj= '<b>Nombre:</b><br/>' + user.nombre + '<br/><b>Apellido:</b><br/>' + user.apellido + '<br/><b>correo:</b><br/> ' + user.correo + '<br/>';
+					$('#mensaje').html(htmlmsj);
 					$('#myModal').modal('show');
 					});
 					
