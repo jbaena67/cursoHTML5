@@ -5,7 +5,6 @@
   <title>Disfruta el codigo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
 </head>
 <body>
         <div class="navbar navbar-inverse navbar-fixed-top">
@@ -59,6 +58,7 @@
         <input id="guardar" name="guardar" type="submit" value="Guardar" class="btn btn-lg btn-primary btn-block">
         <input id="mostrar" name="mostrar" type="submit" value="Mostrar" class="btn btn-lg btn-primary btn-block">
       </form>
+      
 </div>
 <div class="container">
 <hr>
@@ -66,6 +66,13 @@
 	<p>Hecho con Amor :)</p>
 	</footer>
  </div>
+ <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content" id="mensaje" style="width:300px;height:300px; padding:50px">
+              Los datos fueron guardados.	
+            </div>
+          </div>
+      </div>
 <script src="js/jquery.min.js"></script>
 <script src="js/scrolld.min.js"></script>
          <!-- Aca coloco todo mi js -->
@@ -77,7 +84,7 @@
 				// Check browser support
 				if (typeof(Storage) != "undefined")
 				  {
-				  var objetoJSON = '{nombre:"' + $('#firstname').val() + '",apellido:"' + $('#lastname').val() + '",correo:"' + $('#correo').val() + '"}';
+				  var objetoJSON = '{"nombre":"' + $('#firstname').val() + '","apellido":"' + $('#lastname').val() + '","correo":"' + $('#correo').val() + '"}';
 				  localStorage.setItem("usuario",JSON.stringify(objetoJSON));
 				  showMensaje();
 				  }
@@ -89,7 +96,8 @@
 		$('#mostrar').click(function()
 				{
 					var user = JSON.parse(localStorage.getItem('usuario'));
-					alert(user.nombre);
+					$('#mensaje').html(user.nombre);
+					$('#myModal').modal('show');
 					});
 					
         $("[id*='Btn']").stop(true).on('click',function(e){e.preventDefault();$(this).scrolld();});
